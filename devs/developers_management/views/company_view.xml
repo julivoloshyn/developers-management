@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_company_tree" model="ir.ui.view">
+        <field name="name">company.tree</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="address"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_company_form" model="ir.ui.view">
+        <field name="name">company.form</field>
+        <field name="model">company</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Company Information">
+                        <field name="name"/>
+                        <field name="address"/>
+                    </group>
+                    <group string="Developers">
+                        <field name="developer_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="position_type"/>
+                                <field name="global_identification"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                                <field name="address"/>
+                                <field name="birthdate"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_company_action" model="ir.actions.act_window">
+        <field name="name">View Company</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="add_company_action" model="ir.actions.act_window">
+        <field name="name">Add Company</field>
+        <field name="res_model">company</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

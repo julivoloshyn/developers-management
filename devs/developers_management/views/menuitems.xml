@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem
+                id="developer_menu"
+                name="Developers"
+                sequence="1"
+                groups="base.group_user"/>
+
+        <menuitem
+                id="view_developers_menu"
+                name="View Developers"
+                parent="developer_menu"
+                action="view_developer_action"
+                sequence="2"/>
+
+
+        <menuitem
+                id="add_developers_menu"
+                name="Add Developer"
+                parent="developer_menu"
+                action="add_developer_action"
+                sequence="3"/>
+
+        <menuitem
+                id="view_company_action_menu"
+                name="View Companies"
+                parent="developer_menu"
+                action="view_company_action"
+                sequence="4"/>
+
+
+        <menuitem
+                id="add_company_action_menu"
+                name="Add Company"
+                parent="developer_menu"
+                action="add_company_action"
+                sequence="5"/>
+
+    </data>
+</odoo>
